@@ -1,0 +1,34 @@
+﻿    <?xml version="1.0" encoding="UTF-8"?>
+    <ContentPage Title="Array"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"     xmlns="http://xamarin.com/schemas/2014/forms"     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"     x:Class="XamlExamples.ArrayPage">
+        <ContentPage.Content>
+            <StackLayout Padding="30,30">
+                <Picker>
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Option 1</x:String>
+                            <x:String>Option 2</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+            
+            <StackLayout Padding="30,30">
+                <Label>
+                    <Label.Text>Property Element</Label.Text>
+                </Label>
+                <Label>Content Property</Label>
+                <Button FontSize="Medium" Text="Medium Size Button" />
+                 <Button FontAttributes="Italic,Bold" Text="Italic Bold Button" />
+                <Button Text="Make It So" Clicked="ButtonClicked" />
+                <Grid>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Cell (1,1)" />
+                </Grid>
+            </StackLayout>
+            
+            <StackLayout Padding="30,30">
+                <Label x:Name="MyLabel" Text="Hello Entry" />
+                 <Entry Text="{Binding Path=Text, Source={x:Reference MyLabel}}" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
