@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BT3.Themhoa">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Mã Hoa" Grid.Row="0" Grid.Column="0"></Label>
+                <Picker x:Name="hoapicker" Title="Chọn Hoa" Grid.Row="0" Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type }">
+                            <x:String>Hoa Hong</x:String>
+                            <x:String>Hoa cuoi</x:String>
+                            <x:String>Hoa xuan</x:String>
+                            <x:String>Hoa sinh nhat</x:String>
+                            <x:String x:Name="ArryLoaihoa"></x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Tên Hoa" Grid.Row="1" Grid.Column="0"></Label>
+                <Label Text="Hình" Grid.Row="2" Grid.Column="0"></Label>
+                <Label Text="Giá bán" Grid.Row="3" Grid.Column="0"></Label>
+                <Label Text="Mô tả" Grid.Row="4" Grid.Column="0"></Label>
+                <Entry x:Name="txttenhoa" Grid.Row="1" Grid.Column="1"></Entry>
+                <Entry x:Name="txthinh" Grid.Row="2" Grid.Column="1"></Entry>
+                <Entry x:Name="ngia" Text="{Binding Number, Mode=TwoWay}" Placeholder="Number" Grid.Row="3" Grid.Column="1" Keyboard="Numeric"></Entry>
+                <Entry x:Name="txtmota" Grid.Row="4" Grid.Column="1"></Entry>
+                <Button x:Name="bttthemhoa" Text="Thêm Hoa" Clicked="Themhoaclick" Grid.Row="5" Grid.Column="0"></Button>
+                <Button x:Name="bttxoahoa" Text="Xóa Hoa" Clicked="xoahoaclick" Grid.Row="5" Grid.Column="1"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BT3.Themloaihoa">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Thêm Loại Hoa"/>
+            <Label Text="Tên loại hoa:"/>
+            <Entry x:Name="txttenloai"></Entry>
+            <Button x:Name="btttenloai" Text="Ok" Clicked="tenloaiclick"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
